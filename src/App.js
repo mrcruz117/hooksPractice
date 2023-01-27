@@ -1,5 +1,11 @@
+import UseRef from "./hooks/UseRef";
+
 function App() {
-  return <div>Hello world</div>;
+  return (
+    <>
+      <UseRef />
+    </>
+  );
 }
 
 export default App;
