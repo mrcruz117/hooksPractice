@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 
 export default function UseMemo() {
   const [number, setNumber] = React.useState(0);
   const [dark, setDark] = React.useState(false);
-  const doubleNumber = slowFunction(number);
+  const doubleNumber = useMemo(() => {
+    return slowFunction(number);
+  }, [number]);
   const themeStyles = {
     backgroundColor: dark ? "#333" : "#FFF",
     color: dark ? "#FFF" : "#333",
