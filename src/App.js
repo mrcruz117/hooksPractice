@@ -6,6 +6,7 @@ import useLocalStorage from "./hooks/customHooks/useLocalStorage";
 import useUpdateLogger from "./hooks/customHooks/useUpdateLogger";
 import ToggleComponent from "./testComponents/ToggleComponent";
 import TimeoutComponent from "./testComponents/TimeoutComponent";
+import DebounceComponent from "./testComponents/DebounceComponent";
 
 function App() {
   const [name, setName] = useLocalStorage("name", "");
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
       {/* <ToggleComponent /> */}
-      <TimeoutComponent />
+      {/* <TimeoutComponent /> */}
+      <DebounceComponent />
     </>
   );
 }
